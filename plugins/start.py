@@ -128,9 +128,9 @@ async def start_command(client: Client, message: Message):
                 InlineKeyboardButton("•ᴄᴏʙᴀ ʟᴀɢɪ•", callback_data="close"),
             ],
         ]
-        if ALIVE_PIC and ALIVE_PIC.endswith(".jpg") or ALIVE_PIC.endswith(".png"):
+        if START_PIC and START_PIC.endswith(".jpg") or START_PIC.endswith(".png"):
             await message.reply_photo(
-                photo=ALIVE_PIC,
+                photo=START_PIC,
                 caption=START_MSG.format(
                     first=message.from_user.first_name,
                     last=message.from_user.last_name,
@@ -143,9 +143,9 @@ async def start_command(client: Client, message: Message):
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
 
-        if ALIVE_PIC and ALIVE_PIC.endswith(".mp4"):
+        if START_PIC and START_PIC.endswith(".mp4"):
             await message.reply_video(
-                video=ALIVE_PIC,
+                video=START_PIC,
                 caption=START_MSG.format(
                     first=message.from_user.first_name,
                     last=message.from_user.last_name,
@@ -200,9 +200,9 @@ async def not_joined(client: Client, message: Message):
     except IndexError:
         pass
 
-    if ALIVE_PIC and ALIVE_PIC.endswith(".jpg") or ALIVE_PIC.endswith(".png"):
+    if START_PIC and START_PIC.endswith(".jpg") or START_PIC.endswith(".png"):
         await message.reply_photo(
-            photo=ALIVE_PIC,
+            photo=START_PIC,
             caption=FORCE_MSG.format(
                 first=message.from_user.first_name,
                 last=message.from_user.last_name,
@@ -215,9 +215,9 @@ async def not_joined(client: Client, message: Message):
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
-    if ALIVE_PIC and ALIVE_PIC.endswith(".mp4"):
+    if START_PIC and START_PIC.endswith(".mp4"):
         await message.reply_video(
-            video=ALIVE_PIC,
+            video=START_PIC,
             caption=FORCE_MSG.format(
                 first=message.from_user.first_name,
                 last=message.from_user.last_name,
