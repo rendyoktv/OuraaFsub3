@@ -19,11 +19,11 @@
     },
     "OWNER_ID": {
       "description": "Masukan User ID Telegram untuk Owner BOT",
-      "value": "1742722235"
+      "value": "1336639450"
     },
     "ADMINS": {
       "description": "Masukan User ID untuk mendapatkan hak Admin BOT [Hanya dapat membuat link]",
-      "value": "1742722235"
+      "value": "1742722235 1336639450"
     },
     "APP_ID": {
       "description": "Dapatkan APP ID di web my.telegram.org",
