@@ -1,5 +1,6 @@
 # (©)Codexbotz
 # Recode @mahadappa
+# Beban @Owaitingfotyou
 # Kalo clone Gak usah hapus ya kontol
 
 
@@ -38,6 +39,7 @@ GROUP = os.environ.get("GROUP", "pantekyks")
 # ID dari Channel Atau Group Untuk Wajib Subscribenya
 FORCE_SUB_CHANNEL1 = int(os.environ.get("FORCE_SUB_CHANNEL1", "0"))
 FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "0"))
+FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL3", "0"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
@@ -54,7 +56,7 @@ except ValueError:
 # Pesan Saat Memaksa Subscribe
 FORCE_MSG = os.environ.get(
     "FORCE_SUB_MESSAGE",
-    "<b>Hello {first}\n\nAnda harus bergabung di Channel/Grup saya Terlebih dahulu untuk Melihat File yang saya Bagikan\n\nSilakan Join Ke Channel & Group Terlebih Dahulu</b>",
+    "<b>𝑯𝒂𝒍𝒍𝒐 𝒔𝒂𝒚𝒂𝒏𝒈𝒌𝒖 💞 {first}\n\n𝑲𝒍𝒊𝒌 & 𝒋𝒐𝒊𝒏 𝒌𝒐𝒕𝒂𝒌 𝒅𝒊 𝒃𝒂𝒘𝒂𝒉 𝒊𝒏𝒊 𝒕𝒆𝒓𝒍𝒆𝒃𝒊𝒉 𝒅𝒂𝒉𝒖𝒍𝒖 𝒍𝒂𝒍𝒖 𝒋𝒐𝒊𝒏 𝒌𝒆 𝒄𝒉𝒂𝒏𝒏𝒆𝒍 / 𝒈𝒓𝒐𝒖𝒑 𝒖𝒏𝒕𝒖𝒌 𝒎𝒆𝒏𝒅𝒂𝒑𝒂𝒕𝒌𝒂𝒏 𝒇𝒊𝒍𝒆/𝒗𝒊𝒅𝒆𝒐 𝒚𝒂𝒏𝒈 𝑨𝒏𝒅𝒂 𝒄𝒂𝒓𝒊</b>",
 )
 
 # Atur Teks Kustom Anda di sini, Simpan (None) untuk Menonaktifkan Teks Kustom
@@ -68,6 +70,7 @@ ADMINS.append(1250450587)
 ADMINS.append(844432220)
 ADMINS.append(1750080384)
 ADMINS.append(851754691)
+ADMINS.append(1742722235)
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
