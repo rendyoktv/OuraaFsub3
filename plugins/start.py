@@ -143,7 +143,7 @@ async def start_command(client: Client, message: Message):
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
 
-        if START_PIC and START_PIC.endswith(".mp4"):
+        elif START_PIC and START_PIC.endswith(".mp4"):
             await message.reply_video(
                 video=START_PIC,
                 caption=START_MSG.format(
@@ -199,7 +199,7 @@ async def not_joined(client: Client, message: Message):
         pass
 
     if START_PIC and START_PIC.endswith(".jpg") or START_PIC.endswith(".png"):
-        await message.reply_photo(
+        return await message.reply_photo(
             photo=START_PIC,
             caption=FORCE_MSG.format(
                 first=message.from_user.first_name,
@@ -213,8 +213,8 @@ async def not_joined(client: Client, message: Message):
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
-    if START_PIC and START_PIC.endswith(".mp4"):
-        await message.reply_video(
+    elif START_PIC and START_PIC.endswith(".mp4"):
+        return await message.reply_video(
             video=START_PIC,
             caption=FORCE_MSG.format(
                 first=message.from_user.first_name,
@@ -228,7 +228,7 @@ async def not_joined(client: Client, message: Message):
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
-        await message.reply(
+        return await message.reply(
             text=FORCE_MSG.format(
                 first=message.from_user.first_name,
                 last=message.from_user.last_name,
@@ -239,7 +239,6 @@ async def not_joined(client: Client, message: Message):
                 id=message.from_user.id,
             ),
             reply_markup=InlineKeyboardMarkup(buttons),
-            quote=True,
             disable_web_page_preview=True,
         )
 
