@@ -48,6 +48,13 @@ START_MSG = os.environ.get(
     "START_MESSAGE",
     "<b>Hello {first}</b>\n\n<b>Saya dapat menyimpan file pribadi di Channel Tertentu dan pengguna lain dapat mengaksesnya dari link khusus.</b>",
 )
+
+# Gambar di pesan /start
+START_PIC = os.environ.get(
+    "START_PIC",
+    "https://telegra.ph/file/b5196e60391274a325d3f.jpg",
+)
+
 try:
     ADMINS = [int(x) for x in (os.environ.get("ADMINS", "").split())]
 except ValueError:
