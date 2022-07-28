@@ -63,18 +63,7 @@
     },
     "FORCE_SUB_MESSAGE": {
       "description": "Pesan Paksa Subscribe bot, Gunakan Format parsemode HTML",
-      "value": "<b>ʜᴀʟʟᴏ ꜱᴀʏᴀɴɢᴋᴜ... {first}
-
-GAMAU RIBET KLIK LINK?  JOIN VIP AJA💦
-CUKUP BAYAR DAN BISA NIKMATIN SEMUA VIDEO NYA!
-
-❒ JOIN? CHAT ADMIN :
- ➥ @SYGANNIE
-❒ TESTI VVIP :
- ➥ @TESTIVIPGACOR
-
-ᴜɴᴛᴜᴋ ᴍᴇɴᴅᴀᴘᴀᴛᴋᴀɴ ꜰɪʟᴇ / ᴠɪᴅᴇᴏ ɴʏᴀ ꜱɪʟᴀʜᴋᴀɴ ᴋʟɪᴋ ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ ᴀᴛᴀᴜ ɢʀᴜᴘ ɴʏᴀ ᴛᴇʀʟᴇʙɪʜ ᴅᴀʜᴜʟᴜ</b>"
-
+      "value": "<b>Hello {first}\n\nAnda harus bergabung di Channel/Grup saya untuk menggunakan saya\n\nSilakan Join Ke Channel Terlebih Dahulu</b>"
    } 
   },
   "addons": [
