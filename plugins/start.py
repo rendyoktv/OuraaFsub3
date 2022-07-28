@@ -12,7 +12,7 @@ from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 from bot import Bot
-from config import ADMINS, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON, FORCE_MSG, PROTECT_CONTENT, START_MSG
+from config import ADMINS, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON, FORCE_MSG, PROTECT_CONTENT, START_MSG, START_PIC
 from database.sql import add_user, full_userbase, query_msg
 from helper_func import decode, get_messages, subscribed
 
@@ -128,20 +128,51 @@ async def start_command(client: Client, message: Message):
                 InlineKeyboardButton("•ᴄᴏʙᴀ ʟᴀɢɪ•", callback_data="close"),
             ],
         ]
-        await message.reply_text(
-            text=START_MSG.format(
-                first=message.from_user.first_name,
-                last=message.from_user.last_name,
-                username=None
-                if not message.from_user.username
-                else "@" + message.from_user.username,
-                mention=message.from_user.mention,
-                id=message.from_user.id,
-            ),
-            reply_markup=InlineKeyboardMarkup(buttons),
-            disable_web_page_preview=True,
-            quote=True,
-        )
+        if ALIVE_PIC and ALIVE_PIC.endswith(".jpg") or ALIVE_PIC.endswith(".png"):
+            await message.reply_photo(
+                photo=ALIVE_PIC,
+                caption=START_MSG.format(
+                    first=message.from_user.first_name,
+                    last=message.from_user.last_name,
+                    username=None
+                    if not message.from_user.username
+                    else "@" + message.from_user.username,
+                    mention=message.from_user.mention,
+                    id=message.from_user.id,
+                ),
+                reply_markup=InlineKeyboardMarkup(buttons),
+            )
+
+        if ALIVE_PIC and ALIVE_PIC.endswith(".mp4"):
+            await message.reply_video(
+                video=ALIVE_PIC,
+                caption=START_MSG.format(
+                    first=message.from_user.first_name,
+                    last=message.from_user.last_name,
+                    username=None
+                    if not message.from_user.username
+                    else "@" + message.from_user.username,
+                    mention=message.from_user.mention,
+                    id=message.from_user.id,
+                ),
+                reply_markup=InlineKeyboardMarkup(buttons),
+            )
+
+        else:
+            await message.reply_text(
+                text=START_MSG.format(
+                    first=message.from_user.first_name,
+                    last=message.from_user.last_name,
+                    username=None
+                    if not message.from_user.username
+                    else "@" + message.from_user.username,
+                    mention=message.from_user.mention,
+                    id=message.from_user.id,
+                ),
+                reply_markup=InlineKeyboardMarkup(buttons),
+                disable_web_page_preview=True,
+                quote=True,
+            )
 
     return
 
@@ -169,20 +200,50 @@ async def not_joined(client: Client, message: Message):
     except IndexError:
         pass
 
-    await message.reply(
-        text=FORCE_MSG.format(
-            first=message.from_user.first_name,
-            last=message.from_user.last_name,
-            username=None
-            if not message.from_user.username
-            else "@" + message.from_user.username,
-            mention=message.from_user.mention,
-            id=message.from_user.id,
-        ),
-        reply_markup=InlineKeyboardMarkup(buttons),
-        quote=True,
-        disable_web_page_preview=True,
-    )
+    if ALIVE_PIC and ALIVE_PIC.endswith(".jpg") or ALIVE_PIC.endswith(".png"):
+        await message.reply_photo(
+            photo=ALIVE_PIC,
+            caption=FORCE_MSG.format(
+                first=message.from_user.first_name,
+                last=message.from_user.last_name,
+                username=None
+                if not message.from_user.username
+                else "@" + message.from_user.username,
+                mention=message.from_user.mention,
+                id=message.from_user.id,
+            ),
+            reply_markup=InlineKeyboardMarkup(buttons),
+        )
+
+    if ALIVE_PIC and ALIVE_PIC.endswith(".mp4"):
+        await message.reply_video(
+            video=ALIVE_PIC,
+            caption=FORCE_MSG.format(
+                first=message.from_user.first_name,
+                last=message.from_user.last_name,
+                username=None
+                if not message.from_user.username
+                else "@" + message.from_user.username,
+                mention=message.from_user.mention,
+                id=message.from_user.id,
+            ),
+            reply_markup=InlineKeyboardMarkup(buttons),
+        )
+    else:
+        await message.reply(
+            text=FORCE_MSG.format(
+                first=message.from_user.first_name,
+                last=message.from_user.last_name,
+                username=None
+                if not message.from_user.username
+                else "@" + message.from_user.username,
+                mention=message.from_user.mention,
+                id=message.from_user.id,
+            ),
+            reply_markup=InlineKeyboardMarkup(buttons),
+            quote=True,
+            disable_web_page_preview=True,
+        )
 
 
 @Bot.on_message(filters.command("users") & filters.private & filters.user(ADMINS))
