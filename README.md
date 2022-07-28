@@ -14,7 +14,7 @@ Bot Telegram untuk menyimpan Posting atau File yang dapat Diakses melalui Link K
 ##
 ### Installation
 #### Deploy on Heroku
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/ReyyNada/ReyyFileSharing2"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Oura-Ubot/OuraaFsub3"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 
 
@@ -56,6 +56,7 @@ python3 main.py
 * `FORCE_SUB_MESSAGE` Opsional: Pesan Paksa Subscribe bot, Gunakan Format parsemode HTML
 * `FORCE_SUB_CHANNEL_1` Masukan ID dari Channel Untuk Wajib Subscribenya
 * `FORCE_SUB_CHANNEL_2` Masukan ID dari Channel Untuk Wajib Subscribenya
+* `FORCE_SUB_CHANNEL_3` Masukan ID dari Channel Untuk Wajib Subscribenya
 ### Extra Variables
 
 * `CUSTOM_CAPTION` letakkan teks teks Kustom Anda jika Anda ingin Mengatur Teks Kustom, Anda dapat menggunakan HTML dan <a href='https://github.com/mrismanaziz/File-Sharing-Man/blob/main/README.md#custom_caption'>fillings</a> untuk pemformatan (hanya untuk dokumen)
