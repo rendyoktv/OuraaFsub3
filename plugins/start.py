@@ -174,7 +174,74 @@ async def start_command(client: Client, message: Message):
                 quote=True,
             )
 
-    return
+        return
+
+
+@Bot.on_message(filters.command("start") & filters.private)
+async def not_joined(client: Client, message: Message):
+    buttons = [
+        [
+            InlineKeyboardButton("•ᴄʜᴀɴᴇʟ•", url=client.invitelink1), 
+            InlineKeyboardButton("•ᴄʜᴀɴᴇʟ•", url=client.invitelink2),
+            InlineKeyboardButton("•ᴄʜᴀɴᴇʟ•", url=client.invitelink3),
+        ],
+    ]
+    try:
+        buttons.append(
+            [
+                InlineKeyboardButton(
+                    text="•ᴄᴏʙᴀ ʟᴀɢɪ•",
+                    url=f"https://t.me/{client.username}?start={message.command[1]}",
+                )
+            ]
+        )
+    except IndexError:
+        pass
+
+    if START_PIC and START_PIC.endswith(".jpg") or START_PIC.endswith(".png"):
+        await message.reply_photo(
+            photo=START_PIC,
+            caption=FORCE_MSG.format(
+                first=message.from_user.first_name,
+                last=message.from_user.last_name,
+                username=None
+                if not message.from_user.username
+                else "@" + message.from_user.username,
+                mention=message.from_user.mention,
+                id=message.from_user.id,
+            ),
+            reply_markup=InlineKeyboardMarkup(buttons),
+        )
+
+    if START_PIC and START_PIC.endswith(".mp4"):
+        await message.reply_video(
+            video=START_PIC,
+            caption=FORCE_MSG.format(
+                first=message.from_user.first_name,
+                last=message.from_user.last_name,
+                username=None
+                if not message.from_user.username
+                else "@" + message.from_user.username,
+                mention=message.from_user.mention,
+                id=message.from_user.id,
+            ),
+            reply_markup=InlineKeyboardMarkup(buttons),
+        )
+    else:
+        await message.reply(
+            text=FORCE_MSG.format(
+                first=message.from_user.first_name,
+                last=message.from_user.last_name,
+                username=None
+                if not message.from_user.username
+                else "@" + message.from_user.username,
+                mention=message.from_user.mention,
+                id=message.from_user.id,
+            ),
+            reply_markup=InlineKeyboardMarkup(buttons),
+            quote=True,
+            disable_web_page_preview=True,
+        )
 
 
 @Bot.on_message(filters.command("users") & filters.private & filters.user(ADMINS))
