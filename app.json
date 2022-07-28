@@ -1,12 +1,12 @@
 {
-  "name": "ReyyFileSharing2",
+  "name": "OuraaFsub3",
   "description": "BOT Multi Force Subs File Sharing Bot berguna untuk menyimpan file dan dapat diakses melalui link khusus",
   "keywords": [
     "telegram",
     "file",
     "sharing"
   ],
-  "repository": "https://github.com/ReyyNada/ReyyFileSharing2",
+  "repository": "https://github.com/Oura-Ubot/OuraFsub3",
   "logo": "https://telegra.ph/file/c7af861c69985c2056a1e.jpg",
   "env": {
     "TG_BOT_TOKEN": {
@@ -15,23 +15,23 @@
     },
     "OWNER": {
       "description": "Masukan Username Telegram untuk Owner BOT [ Jangan Pake @ ]",
-      "value": ""
+      "value": "Owaitingforyou"
     },
     "OWNER_ID": {
       "description": "Masukan User ID Telegram untuk Owner BOT",
-      "value": ""
+      "value": "1742722235"
     },
     "ADMINS": {
       "description": "Masukan User ID untuk mendapatkan hak Admin BOT [Hanya dapat membuat link]",
-      "value": ""
+      "value": "1742722235"
     },
     "APP_ID": {
       "description": "Dapatkan APP ID di web my.telegram.org",
-      "value": ""
+      "value": "10171254"
     },
     "API_HASH": {
       "description": "Dapatkan API HASH di web my.telegram.org",
-      "value": ""
+      "value": "1090b5b41d141da66f22126a8bbe6ed7"
     },
     "CHANNEL_ID": {
       "description": "Masukan ID Channel Untuk [Channel Database]",
@@ -49,13 +49,17 @@
       "description": "Masukan ID dari Channel Atau Group Untuk Wajib Subscribenya",
       "value": "-100"
     },
+    "FORCE_SUB_CHANNEL3": {
+      "description": "Masukan ID dari Channel Atau Group Untuk Wajib Subscribenya",
+      "value": "-100"
+    },
     "START_MESSAGE": {
       "description": "Pesan /start memulai awalan ke bot, Gunakan format parsemode HTML",
       "value": "<b>Hello {first}\n\nSaya dapat menyimpan file pribadi di Channel Tertentu dan pengguna lain dapat mengaksesnya dari link khusus.</b>"
     },
     "FORCE_SUB_MESSAGE": {
       "description": "Pesan Paksa Subscribe bot, Gunakan Format parsemode HTML",
-      "value": "<b>Hello {first}\n\nAnda harus bergabung di Channel/Grup saya untuk menggunakan saya\n\nSilakan Join Ke Channel Terlebih Dahulu</b>"
+      "value": "<b>𝑯𝒂𝒍𝒍𝒐 𝒔𝒂𝒚𝒂𝒏𝒈𝒌𝒖 💞 {first}\n\n𝑲𝒍𝒊𝒌 & 𝒋𝒐𝒊𝒏 𝒌𝒐𝒕𝒂𝒌 𝒅𝒊 𝒃𝒂𝒘𝒂𝒉 𝒊𝒏𝒊 𝒕𝒆𝒓𝒍𝒆𝒃𝒊𝒉 𝒅𝒂𝒉𝒖𝒍𝒖 𝒍𝒂𝒍𝒖 𝒋𝒐𝒊𝒏 𝒌𝒆 𝒄𝒉𝒂𝒏𝒏𝒆𝒍 / 𝒈𝒓𝒐𝒖𝒑 𝒖𝒏𝒕𝒖𝒌 𝒎𝒆𝒏𝒅𝒂𝒑𝒂𝒕𝒌𝒂𝒏 𝒇𝒊𝒍𝒆/𝒗𝒊𝒅𝒆𝒐 𝒚𝒂𝒏𝒈 𝑨𝒏𝒅𝒂 𝒄𝒂𝒓𝒊</b>"
    } 
   },
   "addons": [
