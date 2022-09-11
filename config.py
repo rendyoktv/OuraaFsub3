@@ -30,7 +30,7 @@ OWNER = os.environ.get("OWNER", "lahlausokap")
 PROTECT_CONTENT = os.environ.get("PROTECT_CONTENT", "False")
 
 # Database
-DB_URI = os.environ.get("DATABASE_URL", "postgres://bots:@postgres_db/bots")
+DB_URI = os.environ.get("DATABASE_URL", "postgres://bots:password@postgres_db/bots")
 
 # Username CH & Group
 CHANNEL = os.environ.get("CHANNEL", "darksidefcx")
