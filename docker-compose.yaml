@@ -13,6 +13,10 @@ services:
 
   postgres_db:
     image: postgresforbot:latest
+    environment:
+      - POSTGRES_USER=bots
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=bots
     ports:    # Set up ports exposed for other containers to connect to
       - 5432
     networks:
