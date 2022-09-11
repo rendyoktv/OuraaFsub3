@@ -14,7 +14,8 @@ services:
   postgres_db:
     image: postgresforbot:latest
     environment:
-      - POSTGRES_PASSWORD=password
+      - POSTGRES_USERNAME=bots
+      - POSTGRES_PASSWORD=
     ports:    # Set up ports exposed for other containers to connect to
       - 5432
     networks:
