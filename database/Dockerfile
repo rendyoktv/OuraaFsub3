@@ -1,6 +1,6 @@
 FROM postgres:latest
 
-ENV POSTGRES_PASSWORD=password
+ENV POSTGRES_PASSWORD=secret
 
 ENV POSTGRES_USER=bots
 
