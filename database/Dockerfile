@@ -2,8 +2,8 @@ FROM postgres:latest
 
 ENV POSTGRES_PASSWORD=password
 
-ENV POSTGRES_USER=docker
+ENV POSTGRES_USER=bots
 
-ENV POSTGRES_DB=docker
+ENV POSTGRES_DB=bots
 
 COPY initdb.sql /docker-entrypoint-initdb.d/initdb.sql
