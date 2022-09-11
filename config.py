@@ -9,32 +9,32 @@ import os
 from logging.handlers import RotatingFileHandler
 
 # Bot token dari @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "5602759191:AAGBkXp3mtG0Oe3Rpuly09rcRiR5SMB2-sE")
 
 # API ID Anda dari my.telegram.org
-APP_ID = int(os.environ.get("APP_ID", ""))
+APP_ID = int(os.environ.get("APP_ID", "12956504"))
 
 # API Hash Anda dari my.telegram.org
-API_HASH = os.environ.get("API_HASH", "")
+API_HASH = os.environ.get("API_HASH", "eb6a5d6030c672fd9e9a5f477f2a6693")
 
 # ID Channel Database
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ""))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001555147017"))
 
 # OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", ""))
+OWNER_ID = int(os.environ.get("OWNER_ID", "5450675578"))
 
 # NAMA OWNER
-OWNER = os.environ.get("OWNER", "")
+OWNER = os.environ.get("OWNER", "lahlausokap")
 
 # Protect Content
 PROTECT_CONTENT = os.environ.get("PROTECT_CONTENT", "False")
 
 # Database
-DB_URI = os.environ.get("DATABASE_URL", "")
+DB_URI = os.environ.get("DATABASE_URL", "postgres://bottest:password@localhost/bot")
 
 # Username CH & Group
-CHANNEL = os.environ.get("CHANNEL", "mahadappa")
-GROUP = os.environ.get("GROUP", "pantekyks")
+CHANNEL = os.environ.get("CHANNEL", "darksidefcx")
+GROUP = os.environ.get("GROUP", "DarksidefcXx")
 
 # ID dari Channel Atau Group Untuk Wajib Subscribenya
 FORCE_SUB_CHANNEL1 = int(os.environ.get("FORCE_SUB_CHANNEL1", "0"))
