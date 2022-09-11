@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip3 install -r requirement.txt
+RUN pip3 install -r requirements.txt
 
 EXPOSE 9002
 
