@@ -14,13 +14,13 @@ services:
   postgres_db:
     image: postgresforbot:latest
     ports:    # Set up ports exposed for other containers to connect to
-      - 5433:5432
+      - 5432
     networks:
       - app-tier
     volumes:
       - ./database:/docker-entrypoint-initdb.d
 
-  python_app:
+  darkside:
     build:
       context: .
       dockerfile: Dockerfile
